@@ -1,0 +1,522 @@
+.custom-header {
+  /* Gradien utama */
+
+  background-image: repeating-radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 4px
+    ),
+    linear-gradient(to right, rgb(22, 7, 63) 70%, rgb(0, 0, 0) 30%);
+  background-size: 20px 20px, 100% 100%;
+}
+/* Animasi Navbar */
+.navbar {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar-dark {
+  background-color: #343a40;
+}
+
+/* Menambahkan efek animasi saat scroll */
+.navbar.scrolled {
+  background-color: #222; /* Warna navbar berubah saat scroll */
+  padding: 10px 0; /* Padding berkurang saat scroll */
+}
+
+/* Animasi saat menyorot item navbar */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+/* Efek transisi pada navbar-toggler */
+.navbar-toggler-icon {
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  transform: rotate(180deg); /* Rotasi ikon saat navbar terbuka */
+}
+
+/* Mengatur animasi saat halaman di-scroll */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Menambahkan animasi pada link social media */
+.social-icons a {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #007bff;
+}
+
+.cv-section .btn-primary {
+  transition: transform 0.3s ease;
+}
+
+.cv-section .btn-primary:hover {
+  transform: scale(1.05);
+}
+
+
+h2 {
+  margin-bottom: 2rem;
+}
+.shadow-custom {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, rgb(22, 7, 63) 70%, rgb(0, 0, 0) 30%);
+  color: white;
+}
+/* gambar */
+.custom-header img {
+  width: 60%; /* Membesarkan gambar */
+  max-width: 300px; /* Batas maksimum lebar gambar */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Memberikan bayangan di bawah gambar */
+  border-radius: 10px; /* Opsional: Menambahkan sudut yang agak membulat */
+}
+.custom-header h1,
+.custom-header p {
+  opacity: 0; /* Mulai dengan transparansi */
+  animation: fadeInLeft 1s forwards; /* Menambahkan animasi fadeInLeft */
+}
+
+.custom-header p {
+  animation-delay: 0.2s; /* Memberikan delay sedikit pada paragraf */
+}
+
+.custom-header img {
+  width: 80%;
+  max-width: 300px;
+  opacity: 0;
+  transform: scale(0.5); /* Mulai dengan ukuran kecil */
+  animation: zoomIn 1s forwards; /* Menambahkan animasi zoomIn */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* .jumbotron, .container {
+  padding: 0;
+  margin: 0;
+} */
+/* Animasi FadeInLeft */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi ZoomIn */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Ikon sosial media */
+.social-icons a {
+  font-size: 40px; /* Ukuran ikon */
+  margin: 0 15px; /* Jarak antar ikon */
+  color: white; /* Warna ikon default */
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none; /* Efek transisi halus */
+}
+
+.social-icons a:hover {
+  color: #000000; /* Warna ikon saat hover */
+  transform: scale(1.2);
+  text-align: none; /* Memperbesar ikon saat hover */
+}
+
+/* Tombol CV */
+.cv-section a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 12px 25px;
+  background-color: #000000; /* Warna tombol */
+  color: white;
+  border-radius: 50px; /* Membuat tombol lebih melengkung */
+  border: 2px solid #000000; /* Border dengan warna tombol */
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cv-section a:hover {
+  background-color: #141d68; /* Warna tombol saat hover */
+  transform: translateY(-5px); /* Efek elevasi tombol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+#about {
+  padding: 60px 20px;
+  color: #f8f9fa;
+  background: linear-gradient(135deg, rgb(22, 7, 63) 100%, #34495e);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  animation: slideDown 1.2s ease-out;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #d3d3d3;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+#projects {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgb(22, 7, 63) 100%, #34495e);
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #210e77;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+.tech-logos {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* skills */
+.skills-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgb(22, 7, 63) 100%, #34495e);
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skill {
+  background: #210e77;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  text-align: center;
+  width: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* kuliah */
+#kuliah {
+  background: linear-gradient(135deg, rgb(22, 7, 63) 100%, #34495e);
+}
+
+#kuliah .experience-box {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-left: 5px solid #000000;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.experience-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.experience-company {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+.experience-description {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.experience-responsibilities {
+  margin-top: 15px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.experience-line {
+  border-top: 2px solid #e1e1e1;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .experience-box {
+    padding: 15px;
+  }
+
+  .experience-title {
+    font-size: 1.2rem;
+  }
+
+  .experience-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* contact */
+#contact {
+  background: linear-gradient(135deg, rgb(22, 7, 63) 100%, #34495e);
+  padding: 60px 0;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.email-btn {
+  background-color: #ff5f5f;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.email-btn:hover {
+  transform: scale(1.1);
+  background-color: #e04f4f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+}
